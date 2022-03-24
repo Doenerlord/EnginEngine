@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Flo\source\repos\EnginEngine\bin\Debug-x64\EnginEngine\EnginEngine.dll</FullPath>
+      <FullPath>C:\Users\Flo\source\repos\EnginEngine\bin\Debug-windows-x86_64\EnginEngine\EnginEngine.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Flo\source\repos\EnginEngine\bin\Debug-x64\Sandbox\Sandbox.exe</FullPath>
+      <FullPath>C:\Users\Flo\source\repos\EnginEngine\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

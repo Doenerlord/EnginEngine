@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Flo\source\repos\EnginEngine\bin\Debug-x64\EnginEngine.dll</FullPath>
+      <FullPath>C:\Users\Flo\source\repos\EnginEngine\bin\Debug-windows-x86_64\EnginEngine\EnginEngine.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
