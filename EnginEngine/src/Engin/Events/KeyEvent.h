@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Engin {
 
 	class Engin_API KeyEvent : public Event {

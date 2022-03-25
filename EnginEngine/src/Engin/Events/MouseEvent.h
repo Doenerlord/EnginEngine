@@ -2,16 +2,14 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Engin {
 
 	class ENGIN_API MouseMovedEvent : public Event {
 	public:
 		MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y) {}
 
-		inline float GetX() const { return m_mouseX; }
-		inline float GetY() const { return m_mouseY; }
+		inline float GetX() const { return m_MouseX; }
+		inline float GetY() const { return m_MouseY; }
 
 		std::string ToString() const override {
 			std::stringstream ss;
