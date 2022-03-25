@@ -142,6 +142,10 @@ IF EXIST ..\bin\Dist-windows-x86_64\EnginEngine\EnginEngine.dll\ (xcopy /Q /E /Y
     <ClInclude Include="src\Engin\Application.h" />
     <ClInclude Include="src\Engin\Core.h" />
     <ClInclude Include="src\Engin\EntryPoint.h" />
+    <ClInclude Include="src\Engin\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Engin\Events\Event.h" />
+    <ClInclude Include="src\Engin\Events\KeyEvent.h" />
+    <ClInclude Include="src\Engin\Events\MouseEvent.h" />
     <ClInclude Include="src\Engin\Log.h" />
   </ItemGroup>
   <ItemGroup>
