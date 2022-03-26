@@ -10,3 +10,13 @@
 #else
 	#error Engin only supports Windows!
 #endif
+
+#ifdef ENGIN_ENABLE_ASSERTS
+	#define ENGIN_ASSERT(x, ...) { if(!(x)) { ENGIN_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); }}
+	#define ENGIN_CORE_ASSERT(x, ...) { if(!(x)) { ENGIN_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); }}
+#else
+	#define ENGIN_ASSSERT(x, ...)
+	#define ENGIN_CORE_ASSERT(x, ...)
+#endif
+
+#define BIT(x) (1 << x)
