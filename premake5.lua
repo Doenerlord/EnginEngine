@@ -34,7 +34,7 @@ project "EnginEngine"
     includedirs {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}"
     }
 
     links {
@@ -59,14 +59,17 @@ project "EnginEngine"
 
     filter "configurations:Debug"
         defines "ENGIN_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "ENGIN_RELEASE"
+        buildoptions "/MD"
         symbols "On"
 
     filter "configurations:Dist"
         defines "ENGIN_DIST"
+        buildoptions "/MD"
         symbols "On"
 
 project "Sandbox"
@@ -102,12 +105,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "ENGIN_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "ENGIN_RELEASE"
+        buildoptions "/MD"
         symbols "On"
 
     filter "configurations:Dist"
         defines "ENGIN_DIST"
+        buildoptions "/MD"
         symbols "On"
