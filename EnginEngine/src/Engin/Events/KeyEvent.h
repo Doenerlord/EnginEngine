@@ -4,7 +4,8 @@
 
 namespace Engin {
 
-	class Engin_API KeyEvent : public Event {
+	class ENGIN_API KeyEvent : public Event {
+	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
@@ -15,6 +16,7 @@ namespace Engin {
 	};
 
 	class ENGIN_API KeyPressedEvent : public KeyEvent {
+	public:
 		KeyPressedEvent(int keycode, int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		inline int GetRepeatCount() const { return m_RepeatCount;  }
@@ -31,7 +33,8 @@ namespace Engin {
 	};
 
 	class ENGIN_API KeyReleasedEvent : public KeyEvent {
-		KeyReleasedEvent(int keycode) : KeyEvent(keycode)) {}
+	public:
+		KeyReleasedEvent(int keycode) : KeyEvent(keycode) {}
 
 		std::string ToString() const override {
 			std::stringstream ss;

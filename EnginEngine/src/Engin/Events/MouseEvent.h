@@ -54,6 +54,7 @@ namespace Engin {
 	};
 
 	class ENGIN_API MouseButtonPressedEvent : public MouseButtonEvent {
+	public:
 		MouseButtonPressedEvent(int button) : MouseButtonEvent(button) {}
 
 		std::string ToString() const override {
@@ -66,6 +67,7 @@ namespace Engin {
 	};
 
 	class ENGIN_API MouseButtonReleasedEvent : public MouseButtonEvent {
+	public:
 		MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) {}
 
 		std::string ToString() const override {
