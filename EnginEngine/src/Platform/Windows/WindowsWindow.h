@@ -14,6 +14,7 @@ namespace Engin {
 
 		void OnUpdate() override;
 
+		//screen width and height can't be negative
 		inline unsigned int GetWidth() const override { return m_Data.Width; }
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
@@ -27,6 +28,7 @@ namespace Engin {
 
 		GLFWwindow* m_Window;
 
+		//a struct which holds the properties of a application window
 		struct WindowData
 		{
 			std::string Title;
