@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engin">
+      <UniqueIdentifier>{B6B01D0D-22C5-45BE-EB46-E91D571A42EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engin\Events">
+      <UniqueIdentifier>{DAB31A8F-C616-AA33-6F9C-E2E95BDE75B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Engin.h" />
+    <ClInclude Include="src\Engin\Application.h">
+      <Filter>Engin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Core.h">
+      <Filter>Engin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\EntryPoint.h">
+      <Filter>Engin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Events\ApplicationEvent.h">
+      <Filter>Engin\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Events\Event.h">
+      <Filter>Engin\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Events\KeyEvent.h">
+      <Filter>Engin\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Events\MouseEvent.h">
+      <Filter>Engin\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Log.h">
+      <Filter>Engin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engin\Window.h">
+      <Filter>Engin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enginpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Engin\Application.cpp">
+      <Filter>Engin</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engin\Log.cpp">
+      <Filter>Engin</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enginpch.cpp" />
+  </ItemGroup>
+</Project>
