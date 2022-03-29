@@ -62,12 +62,13 @@ namespace Engin {
 
 		}
 
-		//used to dispatch all types of events
+		//used to dispatch all types of events. 
+		//exists for every type of event once since it's a template
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {
-			//check which type the event is and run the EventFn function if the types match
+			//check which type the event is and run the binded function if the types match
 			if (m_Event.GetEventType() == T::GetStaticType()) {
-				//sets m_handled to true if this function returns anything other than 0
+				//sets m_handled to true if the AND operation with the return value of the binded function and the event is anything other than 0
 				m_Event.m_Handled = func(*(T*) & m_Event);
 				return true;
 			}

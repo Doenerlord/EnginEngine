@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Core.h"
-#include "Engin/Events/ApplicationEvent.h"
 #include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
+#include "Events/MouseEvent.h"
 #include "Window.h"
 
 namespace Engin {
@@ -20,6 +22,13 @@ namespace Engin {
 	private:
 		//breaks the primary loop when the application window is closed
 		bool OnWindowClose(WindowCloseEvent& e);
+		bool OnWindowResize(WindowResizeEvent& e);
+		bool OnKeyPressed(KeyPressedEvent& e);
+		bool OnKeyReleased(KeyReleasedEvent& e);
+		bool OnMouseScrolled(MouseScrolledEvent& e);
+		bool OnMouseButtonPressed(MouseButtonPressedEvent& e);
+		bool OnMouseButtonReleased(MouseButtonReleasedEvent& e);
+		bool OnMouseMoved(MouseMovedEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
