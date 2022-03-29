@@ -93,7 +93,7 @@ namespace Engin {
 			}
 		});
 
-		//set callbacks to trigger enginEngine Mouse
+		//set callbacks to trigger enginEngine Mouse events
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
@@ -124,6 +124,21 @@ namespace Engin {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
 			MouseMovedEvent event((float)xPos, (float)yPos);
+			data.EventCallback(event);
+		});
+
+		glfwSetWindowFocusCallback(m_Window, [](GLFWwindow* window, int focus) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			WindowFocusEvent event(focus);
+			data.EventCallback(event);
+
+		});
+
+		glfwSetWindowPosCallback(m_Window, [](GLFWwindow* window, int xpos, int ypos) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			WindowMovedEvent event(xpos, ypos);
 			data.EventCallback(event);
 		});
 	}

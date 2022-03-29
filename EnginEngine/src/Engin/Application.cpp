@@ -32,6 +32,9 @@ namespace Engin {
 		dispatcher.Dispatch<MouseButtonPressedEvent>(BIND_EVENT_FN(OnMouseButtonPressed));
 		dispatcher.Dispatch<MouseButtonReleasedEvent>(BIND_EVENT_FN(OnMouseButtonReleased));
 		dispatcher.Dispatch<MouseMovedEvent>(BIND_EVENT_FN(OnMouseMoved));
+		dispatcher.Dispatch<WindowFocusEvent>(BIND_EVENT_FN(OnWindowFocus));
+		dispatcher.Dispatch<WindowMovedEvent>(BIND_EVENT_FN(OnWindowMoved));
+
 
 		//glClearColor(0, 0, 1, 1);
 		ENGIN_CORE_TRACE("{0}", e);
@@ -87,6 +90,16 @@ namespace Engin {
 
 	bool Application::OnMouseMoved(MouseMovedEvent& e) {
 		glClearColor(0.1, 0.2, 0.3, 1);
+		return true;
+	}
+
+	bool Application::OnWindowFocus(WindowFocusEvent& e) {
+		glClearColor(0.8, 0.2, 0.6, 1);
+		return true;
+	}
+
+	bool Application::OnWindowMoved(WindowMovedEvent& e) {
+		glClearColor(0.5, 0, 0.5, 1);
 		return true;
 	}
 

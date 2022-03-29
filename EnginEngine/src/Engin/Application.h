@@ -29,6 +29,8 @@ namespace Engin {
 		bool OnMouseButtonPressed(MouseButtonPressedEvent& e);
 		bool OnMouseButtonReleased(MouseButtonReleasedEvent& e);
 		bool OnMouseMoved(MouseMovedEvent& e);
+		bool OnWindowFocus(WindowFocusEvent& e);
+		bool OnWindowMoved(WindowMovedEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;

@@ -63,4 +63,43 @@ namespace Engin {
 		EVENT_CLASS_TYPE(AppRender)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
+
+	class ENGIN_API WindowFocusEvent : public Event {
+	public:
+		WindowFocusEvent(int focus) : m_Focus(focus) {}
+
+		inline int GetFocus() const { return m_Focus; }
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "WindowFocusEvent: " << m_Focus;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(WindowFocus)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+
+	private:
+		int m_Focus;
+	};
+
+	class ENGIN_API WindowMovedEvent : public Event {
+	public:
+		WindowMovedEvent(int xpos, int ypos) : m_XPos(xpos), m_YPos(ypos) {}
+
+		inline int GetXPos() const { return m_XPos; }
+		inline int GetYPos() const { return m_YPos; }
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "WindowMovedEvent: " << m_XPos << ", " << m_YPos;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(WindowMoved)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+
+	private:
+		int m_XPos, m_YPos;
+	};
 }
