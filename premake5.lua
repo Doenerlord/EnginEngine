@@ -1,5 +1,6 @@
 workspace "EnginEngine"
     architecture "x64"
+    startproject "Sandbox"
 
     configurations {
         "Debug",
